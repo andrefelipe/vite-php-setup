@@ -16,9 +16,9 @@ module.exports = {
     //   ws: true
     // },
 
-    // '/': {
-    //   target: 'http://vite-php-setup.test',
-    //   changeOrigin: true
-    // }
+    '/': {
+      target: 'http://vite-php-setup.test',
+      changeOrigin: true
+    }
   }
 }

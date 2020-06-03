@@ -1,2 +1,3 @@
-# vite-php-setup
-Trying to run Vite on traditional PHP sites
+Trying to run Vite on traditional PHP sites.
+
+Couldn't do it yet
