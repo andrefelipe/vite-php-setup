@@ -1,20 +1,13 @@
+// const prefresh = require('@prefresh/vite')
+const cors = require('@koa/cors')
+
 module.exports = {
-  emitIndex: true,
+  emitIndex: false,
   outDir: '../public/dist',
 
-  proxy: {
-    '/src': {
-      target: 'http://localhost:3000',
-    },
-    '/vite': {
-      target: 'http://localhost:3000',
-    },
-    '/@modules': {
-      target: 'http://localhost:3000',
-    },
-    '/': {
-      target: 'http://vite-php-setup.test',
-      changeOrigin: true
-    }
+  // plugins: [prefresh()],
+
+  configureServer: function ({ app }) {
+    app.use(cors({ origin: '*' }))
   }
 }

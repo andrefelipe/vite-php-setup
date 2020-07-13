@@ -1,15 +1,17 @@
 {
-  "name": "vite",
+  "name": "my-php-project",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build"
   },
   "dependencies": {
-    "vue": "^3.0.0-beta.14"
+    "vue": "^3.0.0-beta.15"
   },
   "devDependencies": {
-    "vite": "^0.20.0",
-    "@vue/compiler-sfc": "^3.0.0-beta.14"
+    "@koa/cors": "^3.1.0",
+    "@prefresh/vite": "^0.10.0",
+    "@vue/compiler-sfc": "^3.0.0-beta.15",
+    "vite": "^1.0.0-beta.11"
   }
 }
