@@ -1,4 +1,4 @@
-Trying to run Vite on traditional PHP sites.
+This is a mock code, simulating how to run Vite on traditional PHP sites.
 
 ### Status
 Works on dev server, but still have to handle production build.
@@ -13,4 +13,4 @@ An important limitation is the Vite's port, it must match the one that was creat
 
 ### Goal
 - Handle production the cleanest way possible;
-- Handle multiple entries, for example, one for the backend and another for frontend;
+- Handle multiple entries, for example, one js/css for the backend and another js/css for frontend;
