@@ -10,7 +10,7 @@ import './index.css'
 // So we would instantiate any known components by their own
 import HelloWorld from './components/HelloWorld.vue'
 
-for (let el of document.getElementsByClassName('vue-app')) {
+for (const el of document.getElementsByClassName('vue-app')) {
 
   createApp({
     template: el.innerHTML,

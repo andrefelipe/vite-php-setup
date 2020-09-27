@@ -1,8 +1,20 @@
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body {
+  font-family: sans-serif;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #000;
+}
+
+button {
+  border: 0;
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.message {
+  color: #bbb;
+  padding: 40px;
+  font-size: 14px;
 }

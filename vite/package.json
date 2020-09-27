@@ -6,11 +6,12 @@
     "build": "vite build"
   },
   "dependencies": {
-    "vue": "^3.0.0-rc.4"
+    "vite": "^1.0.0-rc.4",
+    "vue": "^3.0.0"
   },
   "devDependencies": {
     "@koa/cors": "^3.1.0",
-    "@vue/compiler-sfc": "^3.0.0-rc.4",
-    "vite": "^1.0.0-rc.3"
+    "@vue/compiler-sfc": "^3.0.0",
+    "rollup-plugin-output-manifest": "^1.0.2"
   }
 }
