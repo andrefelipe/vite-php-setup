@@ -6,7 +6,7 @@
 
 // Some dev/prod mechanism would exist in your project
 // Handling manualy here, change to test both cases
-define('IS_DEVELOPMENT', false);
+define('IS_DEVELOPMENT', true);
 
 
 require_once __DIR__ . '/helpers.php';
