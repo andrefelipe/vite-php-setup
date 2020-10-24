@@ -9,14 +9,7 @@ function viteClient()
     }
 
     $host = "http://{$_SERVER['SERVER_NAME']}:3000";
-
-    return <<<HTML
-        <script type="module">
-            import "{$host}/vite/client"
-            window.process = { env: { NODE_ENV: "development" }}
-            </script>
-
-        HTML;
+    return '<script type="module">import "' . $host . '/vite/client"</script>';
 }
 
 
@@ -30,19 +23,13 @@ function viteCss($name)
     }
 
     $asset = viteAsset($name . '.css');
-    return <<<HTML
-        <link rel="stylesheet" href="{$asset}">
-
-        HTML;
+    return '<link rel="stylesheet" href="' . $asset . '">';
 }
 
 function viteJs($name)
 {
     $asset = viteAsset($name . '.js');
-    return <<<HTML
-        <script type="module" src="{$asset}"></script>
-
-        HTML;
+    return '<script type="module" src="' . $asset . '"></script>';
 }
 
 function viteAsset($name)
