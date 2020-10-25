@@ -1,5 +1,6 @@
 <template>
   <h1>Vue {{ msg }}</h1>
+   <!-- TODO handle assets <img alt="Vue logo" src="/assets/logo.png" /> -->
   <button @click="count++">count is: {{ count }}</button>
   <p>Edit <code>components/HelloWorld.vue</code> to test hot module replacement.</p>
 </template>

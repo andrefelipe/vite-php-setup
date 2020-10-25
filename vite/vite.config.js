@@ -24,7 +24,7 @@ export default {
   },
 
   // required to load scripts from localhost
-  configureServer: function ({ app }) {
+  configureServer: ({ app }) => {
     app.use(cors({ origin: '*' }))
   }
 }

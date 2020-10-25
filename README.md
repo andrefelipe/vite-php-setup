@@ -4,8 +4,8 @@ A bare-minimum setup to serve as example to adapt to other scenarios (WordPress,
 
 ### Goal
 
-- Handle the cleanest way possible (almost);
-- Handle multiple entries, for example, one js/css for the backend and another js/css for frontend (not tackled yet);
+- Handle the cleanest way possible;
+- Handle multiple entries, for example, one js/css for the backend and another js/css for frontend;
 
 In the moment we look forward for Vite to offer these:
 
@@ -15,6 +15,8 @@ In the moment we look forward for Vite to offer these:
 ### Status
 
 Works on dev server, but still have to handle production build (SOON) https://github.com/vitejs/vite/issues/341.
+
+TODO Handle multiple entries
 
 ### Notes about our example code
 
