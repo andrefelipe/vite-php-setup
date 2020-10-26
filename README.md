@@ -8,7 +8,15 @@ A bare-minimum setup to serve as example to adapt to other scenarios (WordPress,
 
 ### Status
 
-Works gracefully!
+- Works gracefully!
+
+### Development host
+
+A characteristic of this setup is that you'll run your project from your own local server, for exemple http://vite-php-setup.test
+
+Vite will be running at http://localhost:3000 where our script and styles will be loaded from, but accesing http://localhost:3000 directly will be empty.
+
+Of course, HMR and styles will work just fine! And fast!
 
 ### Notes about our example code
 
@@ -19,5 +27,7 @@ Works gracefully!
 ### Known issue (during Dev only)
 
 A limitation is Vite's port during development, PHP helpers must match the one that was created during "npm run dev" (default 3000). For example, if the port 3000 is in use, Vite will try the next one (3001 and so on), so our helper PHP doesn't know about that.
+
+So make sure Vite dev started at http://localhost:3000
 
 Currently haven't thought of a way to overcome this. It's rare anyway, and some solutions would polute our vite.config anyway.
