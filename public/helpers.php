@@ -1,48 +1,52 @@
 <?php
+// Helpers here serve as example. Change to suit your needs.
 
 // Vite Client that must be loaded during development
-function viteClient()
+function viteClient(): string
 {
     // not required on production
     if (!IS_DEVELOPMENT) {
-        return;
+        return '';
     }
-
     $host = "http://{$_SERVER['SERVER_NAME']}:3000";
     return '<script type="module">import "' . $host . '/vite/client"</script>';
 }
 
 
-// Helpers to output our assets
-
-function viteCss($name)
+// Helper to output style tag
+function viteCss(string $name): string
 {
     // not needed on dev, it's inject by Vite
     if (IS_DEVELOPMENT) {
-        return;
+        return '';
     }
-
-    $asset = viteAsset($name . '.css');
-    return '<link rel="stylesheet" href="' . $asset . '">';
+    return '<link rel="stylesheet" href="' .
+        viteAsset($name . '.css')
+        . '">';
 }
 
-function viteJs($name)
+// Helper to output the script tag
+function viteJs(string $name): string
 {
-    $asset = viteAsset($name . '.js');
-    return '<script type="module" src="' . $asset . '"></script>';
+    return '<script type="module" src="' .
+        viteAsset($name . '.js')
+        . '"></script>';
 }
 
-function viteAsset($name)
+// Helper to locate files
+function viteAsset(string $filename): string
 {
+    // Let Vite handle during dev
     if (IS_DEVELOPMENT) {
-        $host = "http://{$_SERVER['SERVER_NAME']}:3000";
-        $file = '/src/' . $name;
-    } else {
-        $outPath = '/dist/_assets/';
-        $manifest = json_decode(file_get_contents(__DIR__ .  $outPath . 'manifest.json'), true);
-        $host = '';
-        $file = $outPath . ($manifest[$name] ?? $name);
+        return "http://{$_SERVER['SERVER_NAME']}:3000"
+            . '/src/' . $filename;
     }
 
-    return $host . $file;
+    // Locate hashed files in production
+    $manifest = json_decode(file_get_contents(
+        __DIR__ . '/dist/_assets/manifest.json'
+    ), true);
+
+    return '/dist/_assets/'
+        . ($manifest[$filename] ?? $filename);
 }
