@@ -5,7 +5,6 @@ A bare-minimum setup to serve as example to adapt to other scenarios (WordPress,
 ### Goal
 
 - Handle the cleanest way possible;
-- Handle multiple entries, for example, one js/css for the backend and another js/css for frontend;
 
 In the moment we look forward for Vite to offer these:
 
@@ -16,14 +15,16 @@ In the moment we look forward for Vite to offer these:
 
 Works on dev server, but still have to handle production build (SOON) https://github.com/vitejs/vite/issues/341.
 
-TODO Handle multiple entries
+TODO: Handle multiple entries, for example, one js/css for the backend and another js/css for frontend
 
 ### Notes about our example code
 
-- This first level "public" folder is the server's public root, "public/index.php" is the front controller or bootstrap file;
+- This "public" folder is the web server's public root, "public/index.php" is the front controller or bootstrap file;
 - The "vite" folder is outside of public root intentionaly, where it would actually be within a PHP app;
 - For the sake of this example, we are not setting up a SPA, instead we have multiple Vue components sprinkled throughout your page, simulating the mix of regular HTML with interactive elements (using in-DOM HTML as the template);
 
-### Known Issue
+### Known Issue (during Dev only)
 
-An important limitation is the Vite's port, it must match the one that was created during "npm run dev", default 3000. This should be overcomed if Vite handle the custom host.
+A limitation is Vite's port during development, PHP helpers must match the one that was created during "npm run dev" (default 3000). For example, if the port 3000 is in use, Vite will try the next one (3001 and so on), so our helper PHP doesn't know about that.
+
+Currently haven't thought of a way to overcome this. It's rare anyway, and some solutions would polute our vite.config anyway.

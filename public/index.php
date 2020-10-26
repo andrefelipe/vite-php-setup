@@ -4,11 +4,6 @@
 // During dev, this file would be hit when accessing your local host, like:
 // http://vite-php-setup.test
 
-// Some dev/prod mechanism would exist in your project
-// Handling manualy here, change to test both cases
-define('IS_DEVELOPMENT', true);
-
-
 require_once __DIR__ . '/helpers.php';
 
 ?>

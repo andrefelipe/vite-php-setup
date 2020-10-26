@@ -1,6 +1,12 @@
 <?php
 // Helpers here serve as example. Change to suit your needs.
 
+
+// Some dev/prod mechanism would exist in your project
+// Handling manualy here, change to test both cases
+define('IS_DEVELOPMENT', true);
+
+
 // Vite Client that must be loaded during development
 function viteClient(): string
 {

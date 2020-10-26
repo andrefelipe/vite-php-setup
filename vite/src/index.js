@@ -16,6 +16,7 @@ for (const el of document.getElementsByClassName('vue-app')) {
     template: el.innerHTML,
     components: {
       HelloWorld
+      // add here all components that should be available to in-browser template compilation
     }
   }).mount(el)
 
