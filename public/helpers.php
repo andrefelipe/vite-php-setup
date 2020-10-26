@@ -14,8 +14,7 @@ function viteClient(): string
     if (!IS_DEVELOPMENT) {
         return '';
     }
-    $host = "http://{$_SERVER['SERVER_NAME']}:3000";
-    return '<script type="module">import "' . $host . '/vite/client"</script>';
+    return '<script type="module">import "http://localhost:3000/vite/client"</script>';
 }
 
 
@@ -44,7 +43,7 @@ function viteAsset(string $filename): string
 {
     // Let Vite handle during dev
     if (IS_DEVELOPMENT) {
-        return "http://{$_SERVER['SERVER_NAME']}:3000"
+        return "http://localhost:3000"
             . '/src/' . $filename;
     }
 
