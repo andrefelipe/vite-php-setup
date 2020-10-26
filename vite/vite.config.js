@@ -1,30 +1,20 @@
-const cors = require('@koa/cors')
-import outputManifest from 'rollup-plugin-output-manifest'
-
 export default {
 
-  // our output dir for production build
+  // our entry file
+  entry: 'src/index.js',
+
+  // output dir for production build
   outDir: '../public/dist',
 
-  // output our manifest
-  rollupInputOptions: {
-    plugins: [outputManifest({
-      outputPath: '../public/dist/_assets',
-      filter: a => !!a
-    })]
-  },
+  // emit manifest so PHP can find the hashed files
+  emitManifest: true,
 
-  // we don't need to output the index.html
-  emitIndex: false,
+  // required to load scripts from custom host
+  cors: true,
 
   // required for in-browser template compilation
   // https://v3.vuejs.org/guide/installation.html#with-a-bundler
   alias: {
     vue: "vue/dist/vue.esm-bundler.js"
-  },
-
-  // required to load scripts from localhost
-  configureServer: ({ app }) => {
-    app.use(cors({ origin: '*' }))
   }
 }
