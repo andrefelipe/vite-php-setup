@@ -10,17 +10,15 @@ A bare-minimum setup to serve as example to adapt to other scenarios (WordPress,
 
 - Works gracefully!
 
-### Development host
+### Note about the development host
 
-A characteristic of this setup is that you'll run your project from your own local server, for exemple http://vite-php-setup.test
-
-Vite will be running at http://localhost:3000 where our script and styles will be loaded from, but accesing http://localhost:3000 directly will be empty.
+A characteristic of this setup is that you'll run your project from your own local server, for exemple http://vite-php-setup.test. Vite will be running at http://localhost:3000 where our script and styles will be loaded from, but accesing http://localhost:3000 directly will be empty.
 
 Of course, HMR and styles will work just fine! And fast!
 
 ### Notes about our example code
 
-- This "public" folder is the web server's public root, "public/index.php" is the front controller or bootstrap file;
+- The "public" folder is the web server's public root, "public/index.php" is the front controller or bootstrap file;
 - The "vite" folder is outside of public root intentionaly, where it would actually be within a PHP app;
 - For the sake of this example, we are not setting up a SPA, instead we have multiple Vue components sprinkled throughout your page, simulating the mix of regular HTML with interactive elements (using in-DOM HTML as the template);
 
