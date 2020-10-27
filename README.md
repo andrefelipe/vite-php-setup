@@ -2,7 +2,7 @@ This is an example code, simulating how to run Vite on traditional PHP sites.
 
 A bare-minimum setup to serve as example to adapt to other scenarios (WordPress, Laravel, etc).
 
-Vite is amazing. Credits go to Evan You @yyx990803 and the Vue team.
+Vite is amazing. Credits go to Evan You [@yyx990803](https://github.com/yyx990803) and the Vue team.
 
 ### Goal
 
