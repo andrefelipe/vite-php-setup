@@ -1,6 +1,8 @@
-This is a example code, simulating how to run Vite on traditional PHP sites.
+This is an example code, simulating how to run Vite on traditional PHP sites.
 
 A bare-minimum setup to serve as example to adapt to other scenarios (WordPress, Laravel, etc).
+
+Vite is amazing. Credits go to Evan You @yyx990803 and the Vue team.
 
 ### Goal
 
@@ -28,4 +30,4 @@ A limitation is Vite's port during development, PHP helpers must match the one t
 
 So make sure Vite dev started at http://localhost:3000
 
-Currently haven't thought of a way to overcome this. It's rare anyway, and some solutions would polute our vite.config anyway.
+Currently haven't thought of a way to overcome this. It's rare and some solutions would polute our vite.config anyway.
