@@ -1,6 +1,9 @@
 <?php
 // Helpers here serve as example. Change to suit your needs.
 
+// For a real-world example check here https://github.com/wp-bond/bond/blob/master/src/Tooling/Vite.php
+
+
 
 // Some dev/prod mechanism would exist in your project
 // Handling manualy here, change to test both cases
@@ -43,8 +46,7 @@ function viteAsset(string $filename): string
 {
     // Let Vite handle during dev
     if (IS_DEVELOPMENT) {
-        return "http://localhost:3000"
-            . '/src/' . $filename;
+        return 'http://localhost:3000/src/' . $filename;
     }
 
     // Locate hashed files in production
