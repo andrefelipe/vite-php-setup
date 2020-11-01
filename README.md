@@ -1,6 +1,6 @@
 This is an example code, simulating how to run Vite on traditional PHP sites.
 
-A bare-minimum setup to serve as example to adapt to other scenarios (WordPress, Laravel, etc).
+A bare-minimum setup to serve as example to adapt to other scenarios ([WordPress](https://github.com/wp-bond/boilerplate/tree/master/app/themes/boilerplate), Laravel, etc).
 
 [Vite is amazing](https://github.com/vitejs/vite). Credits go to Evan You [@yyx990803](https://github.com/yyx990803) and the Vue team.
 
@@ -31,3 +31,14 @@ A limitation is Vite's port during development, PHP helpers must match the one t
 So make sure Vite dev started at http://localhost:3000
 
 Currently haven't thought of a way to overcome this. It's rare and some solutions would polute our vite.config anyway.
+
+### Tips for multiple entries
+
+You may find the need to handle multiple entries, for example, one js/css for the backend and another js/css for frontend. For that, it depends directly on how you want to organize your code.
+
+So you can have:
+
+- Completely separeted Vite setups, with different dependencies, different configs and problably even different teams developing each part.
+- A single and shared Vite setup, outputing different files in separated build steps.
+
+For the former it should be self explanatory. For the later, you can have a look into [this setup](https://github.com/wp-bond/boilerplate/blob/master/app/themes/boilerplate/package.json).
