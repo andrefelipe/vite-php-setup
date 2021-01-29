@@ -14,7 +14,7 @@ A bare-minimum setup to serve as example to adapt to other scenarios ([WordPress
 
 ### Note about the development host
 
-A characteristic of this setup is that you'll run your project from your own local server, for exemple http://vite-php-setup.test. Vite will be running at http://localhost:3000 where our script and styles will be loaded from, but accesing http://localhost:3000 directly will be empty.
+A characteristic of this setup is that you'll run your project from your own local server, for exemple http://vite-php-setup.test. Vite will be running at http://localhost:3000 where our script and styles will be served from, but accesing http://localhost:3000 directly will be empty.
 
 Of course, HMR and styles will work just fine! And fast!
 
@@ -38,7 +38,5 @@ You may find the need to handle multiple entries, for example, one js/css for th
 
 So you can have:
 
-- Completely separeted Vite setups, with different dependencies, different configs and problably even different teams developing each part.
-- A single and shared Vite setup, outputing different files in separated build steps.
-
-For the former it should be self explanatory. For the later, you can have a look into [this setup](https://github.com/wp-bond/boilerplate/blob/master/app/themes/boilerplate/package.json).
+- A single Vite [multi-page setup](https://vitejs.dev/guide/build.html#multi-page-app).
+- A shared Vite setup, but outputing different entries in separated build steps, [example here](https://github.com/wp-bond/boilerplate/blob/master/app/themes/boilerplate/package.json).

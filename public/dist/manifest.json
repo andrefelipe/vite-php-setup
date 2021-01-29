@@ -1,0 +1,19 @@
+{
+  "main.js": {
+    "file": "assets/main.13a1cd52.js",
+    "src": "main.js",
+    "isEntry": true,
+    "imports": [
+      "_vendor.7580ca5a.js"
+    ],
+    "css": [
+      "assets/main.5924f01a.css"
+    ],
+    "assets": [
+      "assets/logo.3b714202.png"
+    ]
+  },
+  "_vendor.7580ca5a.js": {
+    "file": "assets/vendor.7580ca5a.js"
+  }
+}

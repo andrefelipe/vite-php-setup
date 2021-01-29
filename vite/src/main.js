@@ -1,5 +1,7 @@
+import 'vite/dynamic-import-polyfill'
+
 import { createApp } from 'vue'
-import './index.css'
+import './styles.css'
 
 // If you are build a SPA with a single <div id="app"></div> entry you would:
 // import App from './App.vue'

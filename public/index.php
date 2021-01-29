@@ -15,9 +15,8 @@ require_once __DIR__ . '/helpers.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vite App</title>
 
-    <?= viteClient() ?>
-    <?= viteCss('style') ?>
-    <?= viteJs('index') ?>
+    <?= vite('main.js') ?>
+
 </head>
 
 <body>
