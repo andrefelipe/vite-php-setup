@@ -10,12 +10,17 @@
 // ln -s {path_to_project}/src/assets {path_to_public_html}/assets
 
 import vue from '@vitejs/plugin-vue'
+import liveReload from 'vite-plugin-live-reload'
 const { resolve } = require('path')
+
 
 // https://vitejs.dev/config
 export default {
+
   plugins: [
-    vue()
+    vue(),
+    liveReload(__dirname+'/(app|config|views)/**/*.php')
+    // edit according to your source code
   ],
 
   // config
