@@ -58,7 +58,9 @@ export default {
 
   // required for in-browser template compilation
   // https://v3.vuejs.org/guide/installation.html#with-a-bundler
-  alias: {
-    vue: 'vue/dist/vue.esm-bundler.js'
-  },
+  resolve: {
+    alias: {
+      vue: 'vue/dist/vue.esm-bundler.js'
+    }
+  }
 }
