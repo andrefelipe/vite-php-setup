@@ -14,7 +14,7 @@ A bare-minimum setup to serve as example to adapt to other scenarios ([WordPress
 
 ### Note about the development host
 
-A characteristic of this setup is that you'll run your project from your own local server, for exemple http://vite-php-setup.test. Vite will be running at http://localhost:3000 where our script and styles will be served from, but accesing http://localhost:3000 directly will be empty.
+A characteristic of this setup is that you'll run your project from your own local server, for exemple http://vite-php-setup.test. Vite will be running at http://localhost:3000 where our script and styles will be served from, but accesing http://localhost:3000 directly will be empty, which is fine.
 
 Of course, HMR and styles will work just fine! And fast!
 
@@ -28,14 +28,16 @@ Of course, HMR and styles will work just fine! And fast!
 
 A limitation is Vite's port during development, PHP helpers must match the one that was created during "npm run dev" (default 3000). For example, if the port 3000 is in use, Vite will try the next one (3001 and so on), so our helper PHP wouldn't know about that.
 
-The solution is to stricly specify which port to use, and match the PHP side to the same port. Check vite.config.js for example.
+The solution is to stricly specify which port to use, and match the PHP side to the same port. Check [vite.config.js](https://github.com/andrefelipe/vite-php-setup/blob/master/vite/vite.config.js) for example.
 
 ### Known issue 2 (during Dev only)
 
 Image urls within CSS works fine BUT you need to create a symlink on dev server to map to your assets folder. This is an expected limitation as noted on [Vite docs](https://vitejs.dev/guide/backend-integration.html)
 
 The solution is here, adjust the paths and run in terminal:
-`ln -s {path_to_vite}/src/assets {path_to_public_html}/assets`
+```
+ln -s {path_to_vite}/src/assets {path_to_public_html}/assets
+```
 
 ### Tips for multiple entries
 
