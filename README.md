@@ -24,13 +24,18 @@ Of course, HMR and styles will work just fine! And fast!
 - The "vite" folder is outside of public root intentionaly, where it would actually be within a PHP app;
 - For the sake of this example, we are not setting up a SPA, instead we have multiple Vue components sprinkled throughout your page, simulating the mix of regular HTML with interactive elements (using in-DOM HTML as the template);
 
-### Known issue (during Dev only)
+### Known issue 1 (during Dev only)
 
-A limitation is Vite's port during development, PHP helpers must match the one that was created during "npm run dev" (default 3000). For example, if the port 3000 is in use, Vite will try the next one (3001 and so on), so our helper PHP doesn't know about that.
+A limitation is Vite's port during development, PHP helpers must match the one that was created during "npm run dev" (default 3000). For example, if the port 3000 is in use, Vite will try the next one (3001 and so on), so our helper PHP wouldn't know about that.
 
-So make sure Vite dev started at http://localhost:3000
+The solution is to stricly specify which port to use, and match the PHP side to the same port. Check vite.config.js for example.
 
-Currently haven't thought of a way to overcome this. It's rare and some solutions would polute our vite.config anyway.
+### Known issue 2 (during Dev only)
+
+Image urls within CSS works fine BUT you need to create a symlink on dev server to map to your assets folder. This is an expected limitation as noted on [Vite docs](https://vitejs.dev/guide/backend-integration.html)
+
+The solution is here, adjust the paths and run in terminal:
+`ln -s {path_to_vite}/src/assets {path_to_public_html}/assets`
 
 ### Tips for multiple entries
 

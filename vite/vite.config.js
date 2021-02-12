@@ -7,7 +7,7 @@
 // IMPORTANT image urls in CSS works fine
 // BUT you need to create a symlink on dev server to map this folder during dev
 // on production everything will work just fine:
-// ln -s {path_to_project}/src/assets {path_to_public_html}/assets
+// ln -s {path_to_vite}/src/assets {path_to_public_html}/assets
 
 import vue from '@vitejs/plugin-vue'
 import liveReload from 'vite-plugin-live-reload'
@@ -51,6 +51,7 @@ export default {
     cors: true,
 
     // we need a strict port to match on PHP side
+    // change freely, but update on PHP to match the same port
     strictPort: true,
     port: 3000
   },
