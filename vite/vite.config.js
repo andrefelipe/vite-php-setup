@@ -5,9 +5,9 @@
 // but accessing it directly will be empty
 
 // IMPORTANT image urls in CSS works fine
-// BUT you need to create a symlink on dev server to map this folder during dev
-// on production everything will work just fine:
+// BUT you need to create a symlink on dev server to map this folder during dev:
 // ln -s {path_to_vite}/src/assets {path_to_public_html}/assets
+// on production everything will work just fine
 
 import vue from '@vitejs/plugin-vue'
 import liveReload from 'vite-plugin-live-reload'
