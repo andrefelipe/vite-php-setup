@@ -18,6 +18,8 @@ A characteristic of this setup is that you'll run your project from your own loc
 
 Of course, HMR and styles will work just fine! And fast!
 
+- Mininum Node.js version >=12.0.0
+
 ### Notes about our example code
 
 - The "public" folder is the web server's public root, "public/index.php" is the front controller or bootstrap file;
