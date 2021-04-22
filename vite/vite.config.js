@@ -9,13 +9,14 @@
 // ln -s {path_to_vite}/src/assets {path_to_public_html}/assets
 // on production everything will work just fine
 
+import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import liveReload from 'vite-plugin-live-reload'
 const { resolve } = require('path')
 
 
-// https://vitejs.dev/config
-export default {
+// https://vitejs.dev/config/
+export default defineConfig({
 
   plugins: [
     vue(),
@@ -63,4 +64,4 @@ export default {
       vue: 'vue/dist/vue.esm-bundler.js'
     }
   }
-}
+})
