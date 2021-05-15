@@ -1,5 +1,3 @@
-import 'vite/dynamic-import-polyfill'
-
 import { createApp } from 'vue'
 import './styles.css'
 
