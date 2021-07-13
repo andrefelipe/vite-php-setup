@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
   font-family: sans-serif;
   text-align: center;
@@ -6,6 +10,7 @@ body {
 
 button {
   border: 0;
+  margin: 20px 0;
   background-color: black;
   color: white;
   font-size: 14px;
@@ -15,6 +20,8 @@ button {
 
 .message {
   color: #bbb;
-  padding: 40px;
+  padding: 20px;
+  margin: 20px 0;
   font-size: 14px;
+  background-color: #eee;
 }

@@ -3,15 +3,15 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "APP_ENV=development vite",
-    "build": "APP_ENV=production vite build"
+    "build": "vite build"
   },
   "dependencies": {
-    "vue": "^3.0.11"
+    "vue": "^3.1.4"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.2.2",
-    "@vue/compiler-sfc": "^3.0.11",
-    "vite": "^2.3.2",
+    "@vitejs/plugin-vue": "^1.2.5",
+    "@vue/compiler-sfc": "^3.1.4",
+    "vite": "^2.4.2",
     "vite-plugin-live-reload": "^2.1.0"
   }
 }

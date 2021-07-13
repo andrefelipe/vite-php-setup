@@ -1,23 +1,37 @@
 <template>
+  <img alt="Vue logo" src="../assets/logo.png" height="40" />
+
   <h1>Vue {{ msg }}</h1>
-  <img alt="Vue logo" src="../assets/logo.png" />
-  <button @click="count++">count is: {{ count }}</button>
-  <p>Edit <code>components/HelloWorld.vue</code> to test hot module replacement.</p>
+
+  <p>
+    <a href="https://vitejs.dev/guide/features.html" target="_blank">
+      Vite Documentation
+    </a>
+    |
+    <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Documentation</a>
+  </p>
+
+  <button type="button" @click="state.count++">
+    count is: {{ state.count }}
+  </button>
+  <p>
+    Edit
+    <code>components/HelloWorld.vue</code> to test hot module replacement.
+  </p>
 </template>
 
-<script>
-export default {
-  name: 'HelloWorld',
+<script setup>
+import { defineProps, reactive } from 'vue'
 
-  props: {
-    msg: String,
-    default: ''
-  },
+defineProps({
+  msg: String
+})
 
-  data() {
-    return {
-      count: 0
-    }
-  }
-}
+const state = reactive({ count: 0 })
 </script>
+
+<style scoped>
+a {
+  color: #42b983;
+}
+</style>

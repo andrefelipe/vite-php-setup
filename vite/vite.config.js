@@ -12,7 +12,7 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import liveReload from 'vite-plugin-live-reload'
-const { resolve } = require('path')
+import path from 'path'
 
 
 // https://vitejs.dev/config/
@@ -32,7 +32,7 @@ export default defineConfig({
 
   build: {
     // output dir for production build
-    outDir: resolve(__dirname, '../public/dist'),
+    outDir: path.resolve(__dirname, '../public/dist'),
     emptyOutDir: true,
 
     // emit manifest so PHP can find the hashed files
