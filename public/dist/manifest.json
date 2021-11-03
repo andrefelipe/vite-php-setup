@@ -1,10 +1,13 @@
 {
   "main.js": {
-    "file": "assets/main.afee80be.js",
+    "file": "assets/main.f8b2a48d.js",
     "src": "main.js",
     "isEntry": true,
     "imports": [
-      "_vendor.e9d3b170.js"
+      "_vendor.a085cd8d.js"
+    ],
+    "dynamicImports": [
+      "../vite/modulepreload-polyfill"
     ],
     "css": [
       "assets/main.4fac8c1b.css"
@@ -13,7 +16,12 @@
       "assets/logo.03d6d6da.png"
     ]
   },
-  "_vendor.e9d3b170.js": {
-    "file": "assets/vendor.e9d3b170.js"
+  "_vendor.a085cd8d.js": {
+    "file": "assets/vendor.a085cd8d.js"
+  },
+  "../vite/modulepreload-polyfill": {
+    "file": "assets/modulepreload-polyfill.b7f2da20.js",
+    "src": "../vite/modulepreload-polyfill",
+    "isDynamicEntry": true
   }
 }
