@@ -8,16 +8,39 @@
 // on the links above there is also example for @vitejs/plugin-legacy
 
 
-// Some dev/prod mechanism would exist in your project
-// Handling manualy here, change to test both cases
-define('IS_DEVELOPMENT', true);
 
+// Prints all the html entries needed for Vite
 
-function vite($entry): string
+function vite(string $entry): string
 {
-    return jsTag($entry)
-        . jsPreloadImports($entry)
-        . cssTag($entry);
+    return "\n" . jsTag($entry)
+        . "\n" . jsPreloadImports($entry)
+        . "\n" . cssTag($entry);
+}
+
+
+// Some dev/prod mechanism would exist in your project
+
+function isDev(string $entry): bool
+{
+    // This method is very useful for the local server
+    // if we try to access it, and by any means, didn't started Vite yet
+    // it will fallback to load the production files from manifest
+    // so you still navigate your site as you intended!
+
+    static $exists = null;
+    if ($exists !== null) {
+        return $exists;
+    }
+    $handle = curl_init('http://localhost:3000/' . $entry);
+    curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($handle, CURLOPT_NOBODY, true);
+
+    curl_exec($handle);
+    $error = curl_errno($handle);
+    curl_close($handle);
+
+    return $exists = !$error;
 }
 
 
@@ -25,7 +48,7 @@ function vite($entry): string
 
 function jsTag(string $entry): string
 {
-    $url = IS_DEVELOPMENT
+    $url = isDev($entry)
         ? 'http://localhost:3000/' . $entry
         : assetUrl($entry);
 
@@ -39,7 +62,7 @@ function jsTag(string $entry): string
 
 function jsPreloadImports(string $entry): string
 {
-    if (IS_DEVELOPMENT) {
+    if (isDev($entry)) {
         return '';
     }
 
@@ -55,7 +78,7 @@ function jsPreloadImports(string $entry): string
 function cssTag(string $entry): string
 {
     // not needed on dev, it's inject by Vite
-    if (IS_DEVELOPMENT) {
+    if (isDev($entry)) {
         return '';
     }
 
