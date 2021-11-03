@@ -29,7 +29,7 @@ require_once __DIR__ . '/helpers.php';
     <?= '<p class="message">PHP output here, potentially large HTML chunks</p>' ?>
 
     <div class="vue-app">
-        <hello-world msg="footer"></hello-world>
+        <hello-world msg="component"></hello-world>
     </div>
 
     <?= '<p class="message">PHP output here, potentially large HTML chunks</p>' ?>

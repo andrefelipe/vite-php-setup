@@ -1,11 +1,14 @@
 // https://vitejs.dev/config/#build-polyfillmodulepreload
-// import 'vite/modulepreload-polyfill'
-// still waiting for solution https://github.com/vitejs/vite/issues/4786
-
-import { createApp } from 'vue'
+// using workaround https://github.com/vitejs/vite/issues/4786
+if (import.meta.env.MODE !== 'development') {
+  import('vite/modulepreload-polyfill')
+}
 
 // Styles
-import './styles.css'
+import './styles'
+
+// Vue
+import { createApp } from 'vue'
 
 // If you are build a SPA with a single <div id="app"></div> entry you would:
 // import App from './App.vue'
@@ -13,6 +16,7 @@ import './styles.css'
 
 // The example here is to have multiple Vue apps sprinkled throughout your page
 // So we would instantiate any known components by their own
+// Note our lookup is a wrapping div with .vue-app class
 import HelloWorld from './components/HelloWorld.vue'
 
 for (const el of document.getElementsByClassName('vue-app')) {
