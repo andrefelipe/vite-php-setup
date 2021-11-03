@@ -3,6 +3,7 @@
 
 // http://localhost:3000 is serving Vite on development
 // but accessing it directly will be empty
+// TIP: consider changing the port for each project, see below
 
 // IMPORTANT image urls in CSS works fine
 // BUT you need to create a symlink on dev server to map this folder during dev:
@@ -20,8 +21,13 @@ export default defineConfig({
 
   plugins: [
     vue(),
-    liveReload(__dirname+'/(app|config|views)/**/*.php')
-    // edit according to your source code
+    liveReload([
+      // edit live reload paths according to your source code
+      // for example:
+      __dirname + '/(app|config|views)/**/*.php',
+      // using this for our example:
+      __dirname + '/../public/*.php',
+    ])
   ],
 
   // config
@@ -38,12 +44,9 @@ export default defineConfig({
     // emit manifest so PHP can find the hashed files
     manifest: true,
 
-    // esbuild target
-    target: 'es2018',
-
     // our entry
     rollupOptions: {
-      input: '/main.js'
+      input: path.resolve(__dirname, './src/main.js'),
     }
   },
 
