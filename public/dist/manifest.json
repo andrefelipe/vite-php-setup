@@ -1,6 +1,6 @@
 {
   "main.js": {
-    "file": "assets/main.f8b2a48d.js",
+    "file": "assets/main.dcdeeede.js",
     "src": "main.js",
     "isEntry": true,
     "imports": [
@@ -10,7 +10,7 @@
       "../vite/modulepreload-polyfill"
     ],
     "css": [
-      "assets/main.4fac8c1b.css"
+      "assets/main.8a7eae23.css"
     ],
     "assets": [
       "assets/logo.03d6d6da.png"
