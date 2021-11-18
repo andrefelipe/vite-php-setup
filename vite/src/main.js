@@ -21,7 +21,6 @@ import { createApp } from 'vue'
 // First let's load all components that should be available to in-browser template compilation
 
 // Example of how to import **all** components
-// if importing all is too much you can always do it manually
 // https://dev.to/jakedohm_34/auto-registering-all-your-components-in-vue-3-with-vite-4884
 
 const modules = import.meta.globEager('./components/*.vue')
@@ -34,6 +33,12 @@ for (const path in modules) {
 
   components[name] = modules[path].default
 }
+
+// if importing all is too much you can always do it manually
+// import HelloWorld from './components/HelloWorld.vue'
+// const components = {
+//   HelloWorld,
+// }
 
 // instantiate the Vue apps
 // Note our lookup is a wrapping div with .vue-app class
