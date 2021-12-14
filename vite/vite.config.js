@@ -7,7 +7,7 @@
 
 // IMPORTANT image urls in CSS works fine
 // BUT you need to create a symlink on dev server to map this folder during dev:
-// ln -s {path_to_vite}/src/assets {path_to_public_html}/assets
+// ln -s {path_to_project_source}/src/assets {path_to_public_html}/assets
 // on production everything will work just fine
 
 import { defineConfig } from 'vite'
@@ -46,7 +46,7 @@ export default defineConfig({
 
     // our entry
     rollupOptions: {
-      input: path.resolve(__dirname, './src/main.js'),
+      input: 'main.js'
     }
   },
 
