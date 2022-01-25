@@ -37,8 +37,9 @@ The solution is to stricly specify which port to use, and match the PHP side to 
 Image urls within CSS works fine BUT you need to create a symlink on dev server to map to your assets folder. This is an expected limitation as noted on [Vite docs](https://vitejs.dev/guide/backend-integration.html)
 
 The solution is here, adjust the paths and run in terminal:
+
 ```
-ln -s {path_to_vite}/src/assets {path_to_public_html}/assets
+ln -s {path_to_project_source}/src/assets {path_to_public_html}/assets
 ```
 
 ### Tips for multiple entries
