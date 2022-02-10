@@ -13,7 +13,6 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import liveReload from 'vite-plugin-live-reload'
-import path from 'path'
 
 
 // https://vitejs.dev/config/
@@ -38,7 +37,7 @@ export default defineConfig({
 
   build: {
     // output dir for production build
-    outDir: path.resolve(__dirname, '../public/dist'),
+    outDir: '../../public/dist',
     emptyOutDir: true,
 
     // emit manifest so PHP can find the hashed files
@@ -46,7 +45,7 @@ export default defineConfig({
 
     // our entry
     rollupOptions: {
-      input: 'main.js'
+      input: '/main.js'
     }
   },
 
