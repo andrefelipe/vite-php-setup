@@ -1,10 +1,10 @@
 {
   "main.js": {
-    "file": "assets/main.d6a780f4.js",
+    "file": "assets/main.3d19dad2.js",
     "src": "main.js",
     "isEntry": true,
     "imports": [
-      "_vendor.71af3c91.js"
+      "_vendor.d8db7648.js"
     ],
     "dynamicImports": [
       "../vite/modulepreload-polyfill"
@@ -16,8 +16,8 @@
       "assets/logo.03d6d6da.png"
     ]
   },
-  "_vendor.71af3c91.js": {
-    "file": "assets/vendor.71af3c91.js"
+  "_vendor.d8db7648.js": {
+    "file": "assets/vendor.d8db7648.js"
   },
   "../vite/modulepreload-polyfill": {
     "file": "assets/modulepreload-polyfill.b7f2da20.js",

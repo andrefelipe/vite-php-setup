@@ -10,7 +10,7 @@
 // ln -s {path_to_project_source}/src/assets {path_to_public_html}/assets
 // on production everything will work just fine
 
-import { defineConfig } from 'vite'
+import { defineConfig, splitVendorChunkPlugin } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import liveReload from 'vite-plugin-live-reload'
 import path from 'path'
@@ -26,7 +26,8 @@ export default defineConfig({
       __dirname + '/(app|config|views)/**/*.php',
       // using this for our example:
       __dirname + '/../public/*.php',
-    ])
+    ]),
+    splitVendorChunkPlugin(),
   ],
 
   // config
