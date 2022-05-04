@@ -9,9 +9,9 @@
     "vue": "^3.2.33"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^2.3.1",
+    "@vitejs/plugin-vue": "^2.3.2",
     "@vue/compiler-sfc": "^3.2.33",
-    "vite": "^2.9.7",
+    "vite": "^2.9.8",
     "vite-plugin-live-reload": "^2.1.0"
   }
 }
