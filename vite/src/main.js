@@ -1,10 +1,5 @@
 // https://vitejs.dev/config/#build-polyfillmodulepreload
-// using workaround https://github.com/vitejs/vite/issues/4786
-/* eslint-disable import/first */
-if (import.meta.env.MODE !== 'development') {
-  // @ts-expect-error
-  import('vite/modulepreload-polyfill')
-}
+import 'vite/modulepreload-polyfill'
 
 // Styles
 import './styles'
