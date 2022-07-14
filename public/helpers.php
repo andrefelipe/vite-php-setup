@@ -1,11 +1,13 @@
 <?php
 // Helpers here serve as example. Change to suit your needs.
+const VITE_HOST = 'http://localhost:5133';
 
 // For a real-world example check here:
 // https://github.com/wp-bond/bond/blob/master/src/Tooling/Vite.php
 // https://github.com/wp-bond/boilerplate/tree/master/app/themes/boilerplate
 
-// on the links above there is also example for @vitejs/plugin-legacy
+// you might check @vitejs/plugin-legacy if you need to support older browsers
+// https://github.com/vitejs/vite/tree/main/packages/plugin-legacy
 
 
 
@@ -32,7 +34,7 @@ function isDev(string $entry): bool
     if ($exists !== null) {
         return $exists;
     }
-    $handle = curl_init('http://localhost:3000/' . $entry);
+    $handle = curl_init(VITE_HOST . '/' . $entry);
     curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($handle, CURLOPT_NOBODY, true);
 
@@ -49,7 +51,7 @@ function isDev(string $entry): bool
 function jsTag(string $entry): string
 {
     $url = isDev($entry)
-        ? 'http://localhost:3000/' . $entry
+        ? VITE_HOST . '/' . $entry
         : assetUrl($entry);
 
     if (!$url) {
@@ -97,7 +99,6 @@ function cssTag(string $entry): string
 function getManifest(): array
 {
     $content = file_get_contents(__DIR__ . '/dist/manifest.json');
-
     return json_decode($content, true);
 }
 

@@ -1,7 +1,7 @@
 // View your website at your own local server
 // for example http://vite-php-setup.test
 
-// http://localhost:3000 is serving Vite on development
+// http://localhost:5133 is serving Vite on development
 // but accessing it directly will be empty
 // TIP: consider changing the port for each project, see below
 
@@ -9,6 +9,8 @@
 // BUT you need to create a symlink on dev server to map this folder during dev:
 // ln -s {path_to_project_source}/src/assets {path_to_public_html}/assets
 // on production everything will work just fine
+// (this happens because our Vite code is outside the server public access,
+// if it where, we could use https://vitejs.dev/config/server-options.html#server-origin)
 
 import { defineConfig, splitVendorChunkPlugin } from 'vite'
 import vue from '@vitejs/plugin-vue'
@@ -51,17 +53,15 @@ export default defineConfig({
   },
 
   server: {
-    // required to load scripts from custom host
-    cors: true,
-
     // we need a strict port to match on PHP side
     // change freely, but update on PHP to match the same port
+    // tip: choose a different port per project to run them at the same time
     strictPort: true,
-    port: 3000
+    port: 5133
   },
 
   // required for in-browser template compilation
-  // https://v3.vuejs.org/guide/installation.html#with-a-bundler
+  // https://vuejs.org/guide/scaling-up/tooling.html#note-on-in-browser-template-compilation
   resolve: {
     alias: {
       vue: 'vue/dist/vue.esm-bundler.js'

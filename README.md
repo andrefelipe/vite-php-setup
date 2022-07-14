@@ -14,11 +14,11 @@ A bare-minimum setup to serve as example to adapt to other scenarios ([WordPress
 
 ### Note about the development host
 
-A characteristic of this setup is that you'll run your project from your own local server, for exemple http://vite-php-setup.test. Vite will be running at http://localhost:3000 where our script and styles will be served from, but accesing http://localhost:3000 directly will be empty, which is fine.
+A characteristic of this setup is that you'll run your project from your own local server, for exemple http://vite-php-setup.test. Vite will be running at http://localhost:5133 where our script and styles will be served from, but accesing http://localhost:5133 directly will be empty, which is fine.
 
 Of course, HMR and styles will work just fine! And fast!
 
-- Mininum Node.js version >=12.0.0
+- Mininum Node.js version >=14.18+
 
 ### Notes about our example code
 
@@ -28,7 +28,7 @@ Of course, HMR and styles will work just fine! And fast!
 
 ### Known issue 1 (during Dev only)
 
-A limitation is Vite's port during development, PHP helpers must match the one that was created during "npm run dev" (default 3000). For example, if the port 3000 is in use, Vite will try the next one (3001 and so on), so our helper PHP wouldn't know about that.
+A limitation is Vite's port during development, PHP helpers must match the one that was created during "npm run dev" (default 5173). For example, if the port 5173 is in use, Vite will try the next one (5174 and so on), so our helper PHP wouldn't know about that.
 
 The solution is to stricly specify which port to use, and match the PHP side to the same port. Check [vite.config.js](https://github.com/andrefelipe/vite-php-setup/blob/master/vite/vite.config.js) for example.
 
@@ -41,6 +41,8 @@ The solution is here, adjust the paths and run in terminal:
 ```
 ln -s {path_to_project_source}/src/assets {path_to_public_html}/assets
 ```
+Note: this happens because our Vite code is outside the server public access, if it where, we could use [server.origin](https://vitejs.dev/config/server-options.html#server-origin) config.
+
 
 ### Tips for multiple entries
 
