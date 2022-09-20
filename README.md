@@ -1,8 +1,8 @@
-This is an example code, simulating how to run Vite on traditional PHP sites.
+This is an example code, simulating how to run [Vite](https://github.com/vitejs/vite) on traditional PHP sites.
 
 A bare-minimum setup to serve as example to adapt to other scenarios ([WordPress](https://github.com/wp-bond/boilerplate/tree/master/app/themes/boilerplate), Laravel, etc).
 
-[Vite is amazing](https://github.com/vitejs/vite). Credits go to Evan You [@yyx990803](https://github.com/yyx990803) and the Vue team.
+For everything else beyond the PHP side please refer to the [Vite documentation](https://vitejs.dev), which is great. 
 
 ### Goal
 
@@ -25,6 +25,7 @@ Of course, HMR and styles will work just fine! And fast!
 - The "public" folder is the web server's public root, "public/index.php" is the front controller or bootstrap file;
 - The "vite" folder is outside of public root intentionaly, where it would actually be within a PHP app;
 - For the sake of this example, we are not setting up a SPA, instead we have multiple Vue components sprinkled throughout your page, simulating the mix of regular HTML with interactive elements (using in-DOM HTML as the template);
+- This examples uses Vue, for React refer to [this info](https://github.com/andrefelipe/vite-php-setup/issues/11);
 
 ### Known issue 1 (during Dev only)
 
