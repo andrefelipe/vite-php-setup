@@ -4,11 +4,11 @@
     "src": "assets/logo.png"
   },
   "main.js": {
-    "file": "assets/main.29a2455c.js",
+    "file": "assets/main.62bda64e.js",
     "src": "main.js",
     "isEntry": true,
     "imports": [
-      "_vendor.0ab017d8.js"
+      "_vendor.486920c7.js"
     ],
     "css": [
       "assets/main.4224cc60.css"
@@ -17,8 +17,8 @@
       "assets/logo.03d6d6da.png"
     ]
   },
-  "_vendor.0ab017d8.js": {
-    "file": "assets/vendor.0ab017d8.js"
+  "_vendor.486920c7.js": {
+    "file": "assets/vendor.486920c7.js"
   },
   "main.css": {
     "file": "assets/main.4224cc60.css",
