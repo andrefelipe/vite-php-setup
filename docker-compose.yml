@@ -1,0 +1,20 @@
+version: "3.1"
+services:
+  php-fpm:
+    build: .
+    container_name: vitephp.php
+    working_dir: /app
+    volumes:
+      - ./:/app
+    environment:
+      - WEB_DOCUMENT_ROOT=/app/public
+    ports:
+      - "8114:80"
+    networks:
+      default:
+        aliases:
+          - vitephp.test
+      vitephp:
+
+networks:
+  vitephp:
