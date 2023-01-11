@@ -2,7 +2,7 @@ version: "3.1"
 services:
   php-fpm:
     build: .
-    container_name: vitephp.php
+    container_name: vite-php-setup.php
     working_dir: /app
     volumes:
       - ./:/app
@@ -14,8 +14,8 @@ services:
     networks:
       default:
         aliases:
-          - vitephp.test
-      vitephp:
+          - vite-php-setup.test
+      vite-php-setup:
 
 networks:
-  vitephp:
+  vite-php-setup:
