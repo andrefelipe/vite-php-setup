@@ -10,6 +10,7 @@ services:
       - WEB_DOCUMENT_ROOT=/app/public
     ports:
       - "8114:80"
+      - "5133:5133"
     networks:
       default:
         aliases:

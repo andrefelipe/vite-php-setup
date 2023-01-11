@@ -4,6 +4,13 @@ A bare-minimum setup to serve as example to adapt to other scenarios ([WordPress
 
 For everything else beyond the PHP side please refer to the [Vite documentation](https://vitejs.dev), which is great. 
 
+### Use tool with docker dev environment
+* add entry in hosts-file: `127.0.0.1 vitephp.test`
+* `docker-compose up`
+* `docker exec -w /app/vite vitephp.php npm run dev`
+* open `http://vitephp.test:8114/`
+* voilà!
+
 ### Goal
 
 - Handle the cleanest way possible;
