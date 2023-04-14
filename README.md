@@ -52,7 +52,7 @@ You may find the need to handle multiple entries, for example, one js/css for th
 So you can have:
 
 - A single Vite [multi-page setup](https://vitejs.dev/guide/build.html#multi-page-app).
-- A shared Vite setup, but outputing different entries in separated build steps, [example here](https://github.com/wp-bond/boilerplate/blob/master/app/themes/boilerplate/package.json).
+- A shared Vite setup, but outputing different entries in separated build steps, [example here](https://github.com/wp-bond/boilerplate/blob/master/themes/boilerplate/package.json).
 
 ### Docker dev environment
 To get this running on Docker quickly, [check out this fork](https://github.com/mrothauer/vite-php-setup). Thanks @mrothauer
