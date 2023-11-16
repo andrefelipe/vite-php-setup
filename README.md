@@ -14,11 +14,11 @@ For everything else beyond the PHP side please refer to the [Vite documentation]
 
 ### Note about the development host
 
-A characteristic of this setup is that you'll run your project from your own local server, for exemple http://vite-php-setup.test. Vite will be running at http://localhost:5133 where our script and styles will be served from, but accesing http://localhost:5133 directly will be empty, which is fine.
+A characteristic of this setup is that you'll run your project from your own local server, for exemple http://vite-php-setup.test. Vite will be running at http://localhost:{your_port_number} where our script and styles will be served from, but accesing http://localhost:{your_port_number} directly will be empty, which is fine.
 
 Of course, HMR and styles will work just fine! And fast!
 
-- Mininum Node.js version >=14.18+
+- Mininum Node.js version 18+
 
 ### Notes about our example code
 

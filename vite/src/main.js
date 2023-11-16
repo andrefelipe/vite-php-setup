@@ -18,8 +18,8 @@ import { createApp } from 'vue'
 // First let's load all components that should be available to in-browser template compilation
 
 // Example of how to import **all** components
-const modules = import.meta.glob('./components/*.vue', { eager: true })
 const components = {}
+const modules = import.meta.glob('./components/*.vue', { eager: true })
 for (const path in modules) {
   components[modules[path].default.__name] = modules[path].default
 }
@@ -27,12 +27,11 @@ for (const path in modules) {
 // if importing all is too much you can always do it manually
 // import HelloWorld from './components/HelloWorld.vue'
 // const components = {
-//   HelloWorld,
+//   HelloWorld
 // }
 
-// instantiate the Vue apps
-// Note our lookup is a wrapping div with .vue-app class
-
+// now let's instantiate the Vue apps
+// Note: our lookup is a wrapping div with .vue-app class
 for (const el of document.getElementsByClassName('vue-app')) {
   createApp({
     template: el.innerHTML,

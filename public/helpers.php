@@ -57,9 +57,11 @@ function jsTag(string $entry): string
     if (!$url) {
         return '';
     }
-    return '<script type="module" crossorigin src="'
-        . $url
-        . '"></script>';
+    if (isDev($entry)) {
+        return '<script type="module" src="' . VITE_HOST . '/@vite/client"></script>' . "\n"
+            . '<script type="module" src="' . $url . '"></script>';
+    }
+    return '<script type="module" src="' . $url . '"></script>';
 }
 
 function jsPreloadImports(string $entry): string

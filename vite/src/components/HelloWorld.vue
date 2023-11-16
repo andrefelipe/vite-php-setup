@@ -4,11 +4,11 @@
   <h1>Vue {{ msg }}</h1>
 
   <p>
-    <a href="https://vitejs.dev/guide/features.html" target="_blank">
+    <a href="https://vitejs.dev/guide" target="_blank">
       Vite Documentation
     </a>
     |
-    <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Documentation</a>
+    <a href="https://vuejs.org/guide" target="_blank">Vue 3 Documentation</a>
   </p>
 
   <button type="button" @click="state.count++">

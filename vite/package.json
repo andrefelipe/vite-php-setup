@@ -1,17 +1,17 @@
 {
-  "name": "my-php-project",
-  "version": "0.0.0",
+  "private": true,
+  "type": "module",
   "scripts": {
     "dev": "APP_ENV=development vite",
     "build": "vite build"
   },
   "dependencies": {
-    "vue": "^3.2.45"
+    "vue": "^3.3.8"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^4.0.0",
-    "@vue/compiler-sfc": "^3.2.45",
-    "vite": "^4.0.0",
-    "vite-plugin-live-reload": "^3.0.1"
+    "@vitejs/plugin-vue": "^4.4.1",
+    "@vue/compiler-sfc": "^3.3.8",
+    "vite": "^5.0.0",
+    "vite-plugin-live-reload": "^3.0.2"
   }
 }
