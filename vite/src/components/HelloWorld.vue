@@ -1,7 +1,7 @@
 <template>
   <img alt="Vue logo" src="../assets/logo.png" height="40" />
 
-  <h1>Vue {{ msg }}</h1>
+  <h1>{{ msg }}</h1>
 
   <p>
     <a href="https://vitejs.dev/guide" target="_blank">
@@ -11,8 +11,8 @@
     <a href="https://vuejs.org/guide" target="_blank">Vue 3 Documentation</a>
   </p>
 
-  <button type="button" @click="state.count++">
-    count is: {{ state.count }}
+  <button type="button" @click="count++">
+    count is: {{ count }}
   </button>
   <p>
     Edit
@@ -21,13 +21,13 @@
 </template>
 
 <script setup>
-import { reactive } from 'vue'
+import { ref } from 'vue'
 
 defineProps({
   msg: String
 })
 
-const state = reactive({ count: 0 })
+const count = ref(0)
 </script>
 
 <style scoped>

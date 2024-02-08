@@ -24,13 +24,14 @@ for (const path in modules) {
   components[modules[path].default.__name] = modules[path].default
 }
 
-// if importing all is too much you can always do it manually
+// Ff importing all is too much you can always do it manually
 // import HelloWorld from './components/HelloWorld.vue'
 // const components = {
 //   HelloWorld
 // }
 
-// now let's instantiate the Vue apps
+
+// Now let's instantiate the Vue apps
 // Note: our lookup is a wrapping div with .vue-app class
 for (const el of document.getElementsByClassName('vue-app')) {
   createApp({

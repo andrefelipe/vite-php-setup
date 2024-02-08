@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: sans-serif;
   text-align: center;
@@ -24,4 +25,8 @@ button {
   margin: 20px 0;
   font-size: 14px;
   background-color: #eee;
+
+  &:first-child {
+    margin-top: 0;
+  }
 }

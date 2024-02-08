@@ -1,0 +1,23 @@
+{
+  "_vendor-QJOF9wHK.js": {
+    "file": "assets/vendor-QJOF9wHK.js"
+  },
+  "assets/logo.png": {
+    "file": "assets/logo-j5j6qipL.png",
+    "src": "assets/logo.png"
+  },
+  "main.js": {
+    "file": "assets/main-K49_s_EA.js",
+    "src": "main.js",
+    "isEntry": true,
+    "imports": [
+      "_vendor-QJOF9wHK.js"
+    ],
+    "css": [
+      "assets/main-vBf1Ixez.css"
+    ],
+    "assets": [
+      "assets/logo-j5j6qipL.png"
+    ]
+  }
+}
