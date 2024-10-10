@@ -12,10 +12,10 @@
 // (this happens because our Vite code is outside the server public access,
 // if it were, we could use https://vitejs.dev/config/server-options.html#server-origin)
 
-import { defineConfig, splitVendorChunkPlugin } from 'vite'
+import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import liveReload from 'vite-plugin-live-reload'
-import path from 'node:path'
+import { resolve } from 'node:path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -29,7 +29,6 @@ export default defineConfig({
       // using this for our example:
       __dirname + '/../public/*.php',
     ]),
-    splitVendorChunkPlugin(),
   ],
 
   // config
@@ -48,7 +47,20 @@ export default defineConfig({
 
     // our entry
     rollupOptions: {
-      input: path.resolve(__dirname, 'src/main.js'),
+      input: resolve(__dirname, 'src/main.js'),
+      output: {
+        manualChunks(id) {
+          // all third-party code will be in vendor chunk
+          if (id.includes('node_modules')) {
+            return 'vendor'
+          }
+          // example on how to create another chunk
+          // if (id.includes('src/'components')) {
+          //   return 'components'
+          // }
+          // console.log(id)
+        },
+      },
     }
   },
 
