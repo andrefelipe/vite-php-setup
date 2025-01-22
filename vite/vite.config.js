@@ -5,12 +5,17 @@
 // but accessing it directly will be empty
 // TIP: consider changing the port for each project, see below
 
+// Update the server config below accordingly
+
 // IMPORTANT image urls in CSS works fine
 // BUT you need to create a symlink on dev server to map this folder during dev:
 // ln -s {path_to_project_source}/src/assets {path_to_public_html}/assets
 // on production everything will work just fine
 // (this happens because our Vite code is outside the server public access,
 // if it were, we could use https://vitejs.dev/config/server-options.html#server-origin)
+
+// more info:
+// https://vite.dev/guide/backend-integration.html
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
@@ -69,7 +74,10 @@ export default defineConfig({
     // change freely, but update on PHP to match the same port
     // tip: choose a different port per project to run them at the same time
     strictPort: true,
-    port: 5133
+    port: 5133,
+    cors: {
+      origin: 'http://vite-php-setup.test',
+    }
   },
 
   // required for in-browser template compilation

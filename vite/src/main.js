@@ -1,4 +1,4 @@
-// https://vitejs.dev/config/#build-polyfillmodulepreload
+// https://vite.dev/config/build-options.html#build-modulepreload
 import 'vite/modulepreload-polyfill'
 
 // Styles
@@ -24,7 +24,7 @@ for (const path in modules) {
   components[modules[path].default.__name] = modules[path].default
 }
 
-// Ff importing all is too much you can always do it manually
+// If importing all is too much you can always do it manually
 // import HelloWorld from './components/HelloWorld.vue'
 // const components = {
 //   HelloWorld
