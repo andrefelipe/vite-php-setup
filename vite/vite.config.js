@@ -51,19 +51,17 @@ export default defineConfig({
     manifest: true,
 
     // our entry
-    rollupOptions: {
+    rolldownOptions: {
       input: resolve(__dirname, 'src/main.js'),
       output: {
-        manualChunks(id) {
-          // all third-party code will be in vendor chunk
-          if (id.includes('node_modules')) {
-            return 'vendor'
-          }
-          // example on how to create another chunk
-          // if (id.includes('src/'components')) {
-          //   return 'components'
-          // }
-          // console.log(id)
+        codeSplitting: {
+          minSize: 20000,
+          groups: [
+            {
+              name: 'vendor',
+              test: /node_modules/,
+            },
+          ],
         },
       },
     }
